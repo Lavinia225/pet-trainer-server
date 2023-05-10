@@ -30,4 +30,16 @@ class ApplicationController < Sinatra::Base
     pet.update(params)
     pet.to_json
   end
+
+  delete "/trainers/:id" do
+    trainer = Trainer.find(params[:id])
+    trainer.delete
+    trainer.to_json
+  end
+
+  delete "/pets/:id" do
+    pet = Pet.find(params[:id])
+    pet.delete
+    pet.to_json
+  end
 end
