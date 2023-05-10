@@ -9,4 +9,13 @@ class ApplicationController < Sinatra::Base
     Pet.all.to_json
   end
 
+  post "/trainers" do
+    trainer = Trainer.create(params)
+    trainer.to_json
+  end
+
+  post "/pets" do
+    pet = Pet.create(params)
+    pet.to_json
+  end
 end
