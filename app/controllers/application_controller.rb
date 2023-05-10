@@ -18,4 +18,16 @@ class ApplicationController < Sinatra::Base
     pet = Pet.create(params)
     pet.to_json
   end
+
+  patch "/trainers/:id" do
+    trainer = Trainer.find(params[:id])
+    trainer.update(params)
+    trainer.to_json
+  end
+
+  patch "/pets/:id" do
+    pet = Pet.find(params[:id])
+    pet.update(params)
+    pet.to_json
+  end
 end
