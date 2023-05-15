@@ -4,6 +4,7 @@ puts "🌱 Seeding spices..."
 
 personalities = ["Calm", "Hasty", "Hardy", "Bold", "Relaxed", "Sassy", "Quiet", "Kind"]
 cat_genders = ["Male", "Female", "Nyan-Binary"]
+dog_genders = ["Male", "Female", "Non-Binary"]
 skills = ["Lay Down", "Play Dead", "Roll Over", "Cross Paws", "Backup", "Fetch", "Open Door", "Close Door", "Speak", "Shake", "High Five", "Twirl"]
 
 15.times do 
@@ -23,7 +24,7 @@ end
 20.times do
     Pet.create(name: Faker::Creature::Dog.name, breed: Faker::Creature::Dog.breed, species: "Dog", age: rand(0..22),
      personality: personalities[rand(0...personalities.length)],
-     gender: Faker::Gender.type,
+     gender: dog_genders[rand(0..2)],
      working_on: skills[rand(0...skills.length)],
      trainer_id: active_trainer_ids[rand(0...active_trainer_ids.length)])
 end
