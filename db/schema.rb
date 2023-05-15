@@ -14,13 +14,13 @@ ActiveRecord::Schema.define(version: 2023_05_08_213557) do
 
   create_table "pets", force: :cascade do |t|
     t.string "name"
-    t.integer "trainer_id"
     t.string "species"
     t.string "breed"
-    t.string "working_on"
     t.integer "age"
     t.string "gender"
     t.string "personality"
+    t.integer "trainer_id"
+    t.string "working_on"
   end
 
   create_table "trainers", force: :cascade do |t|

@@ -1,14 +1,14 @@
-class CreatePets < ActiveRecord::Migration[6.1]
+class CreatePets < ActiveRecord::Migration[6.1] #name, Species, breed, Age, Gender, personality, trainer, working on
   def change
     create_table :pets do |t|
       t.string :name
-      t.integer :trainer_id
       t.string :species
       t.string :breed
-      t.string :working_on
       t.integer :age
       t.string :gender
       t.string :personality
+      t.integer :trainer_id
+      t.string :working_on
     end
   end
 end
