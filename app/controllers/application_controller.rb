@@ -11,7 +11,7 @@ class ApplicationController < Sinatra::Base
 
   post "/trainers" do
     trainer = Trainer.create(params)
-    trainer.to_json
+    trainer.to_json(include: :pets)
   end
 
   post "/pets" do
