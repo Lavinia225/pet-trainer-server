@@ -22,7 +22,7 @@ class ApplicationController < Sinatra::Base
   patch "/trainers/:id" do
     trainer = Trainer.find(params[:id])
     trainer.update(params)
-    trainer.to_json
+    trainer.to_json(include: :pets)
   end
 
   patch "/pets/:id" do
