@@ -9,6 +9,10 @@ class ApplicationController < Sinatra::Base
     Trainer.find(params[:id]).to_json(include: :pets)
   end
 
+  get "/pets/:id" do
+    Pet.find(params[:id]).to_json
+  end
+
   post "/trainers" do
     trainer = Trainer.create(params)
     trainer.to_json(include: :pets)
