@@ -1,6 +1,6 @@
 # Pet Trainer
-description with link to frontend repo
-(https://github.com/Lavinia225/pet-trainer-client)
+
+[Click here for the frontend.](https://github.com/Lavinia225/pet-trainer-client)
 
 Pet Trainer is a tool that allows you to create trainers and assign pets for training to them. It can keep track of various properties related to the pet including the skill they are working on and the trainer they are currently assigned to, while also keeping track of a trainer's payrate and which pets are assigned to them. 
 
